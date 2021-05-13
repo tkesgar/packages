@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/tkesgar/packages/compare/@tkesgar/amber@0.2.0...@tkesgar/amber@0.2.1) (2021-05-13)
+
+### Bug Fixes
+
+- **amber:** add back main field for node < 12.20
+  ([9cbca78](https://github.com/tkesgar/packages/commit/9cbca7821cc92fef64fa5365691f967cc8eb9df6))
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See
+[Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
 # 0.2.0 (2021-05-13)
 
 ### Bug Fixes

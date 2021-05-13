@@ -1,6 +1,6 @@
 {
   "name": "@tkesgar/haru",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "Serialize password hash as JSON",
   "keywords": [
     "password",
