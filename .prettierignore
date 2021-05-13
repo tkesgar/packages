@@ -1,0 +1,6 @@
+.husky/
+.browserslistrc
+.editorconfig
+.eslintignore
+.nvmrc
+.prettierignore

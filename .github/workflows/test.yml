@@ -1,0 +1,37 @@
+name: Run tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+    strategy:
+    matrix:
+      node: [12, 14, 16]
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          # https://github.com/codecov/codecov-action/issues/190
+          fetch-depth: 2
+      - uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-
+      - uses: actions/setup-node@v2
+        with:
+          # The Node.js version to configure
+          node-version: ${{ matrix.node }}
+      - name: Install dependencies
+        run: npm ci
+      - name: Execute linter
+        run: npm run lint
+      - name: Run tests
+        run: npm test -- --coverage
+      - uses: codecov/codecov-action@v1
