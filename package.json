@@ -4,9 +4,6 @@
   "engines": {
     "node": ">=16"
   },
-  "workspaces": [
-    "./packages/*"
-  ],
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",
     "@commitlint/config-conventional": "^12.0.1",
