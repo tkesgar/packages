@@ -1,8 +1,0 @@
-dist/
-coverage/
-*.env
-.editorconfig
-.eslintignore
-.gitignore
-.prettierignore
-LICENSE
