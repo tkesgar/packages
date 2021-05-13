@@ -7,18 +7,18 @@
     "promise"
   ],
   "license": "MIT",
-  "author": "Ted Kesgar <t.kesgar@outlook.com> (https://tkesgar.com)",
+  "author": "Ted Kesgar <t.kesgar@outlook.com>",
   "contributors": [
-    "Ted Kesgar <t.kesgar@outlook.com> (https://tkesgar.com)"
+    "Ted Kesgar <t.kesgar@outlook.com>"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tkesgar/amber.git"
+    "url": "git+https://github.com/tkesgar/packages.git"
   },
   "bugs": {
-    "url": "https://github.com/tkesgar/amber/issues"
+    "url": "https://github.com/tkesgar/packages/issues"
   },
-  "homepage": "https://github.com/tkesgar/amber#readme",
+  "homepage": "https://github.com/tkesgar/packages/tree/main/packages/amber#readme",
   "publishConfig": {
     "access": "public"
   },
