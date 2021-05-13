@@ -43,7 +43,7 @@ describe("fromPassword", () => {
 
   it("should throw error if method is unknown", async () => {
     await expect(
-      fromPassword("password", ("foo" as unknown) as HaruMethod)
+      fromPassword("password", "foo" as unknown as HaruMethod)
     ).rejects.toThrowError("Unknown method: foo");
   });
 });

@@ -10,12 +10,12 @@ import {
 describe("createSalt", () => {
   it("should return salt with length 16 bytes (default)", () => {
     const salt = createSalt();
-    expect(salt.length).toBe(16);
+    expect(salt).toHaveLength(16);
   });
 
   it("should return salt with length 24 bytes", () => {
     const salt = createSalt(24);
-    expect(salt.length).toBe(24);
+    expect(salt).toHaveLength(24);
   });
 });
 

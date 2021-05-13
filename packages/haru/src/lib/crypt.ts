@@ -64,6 +64,8 @@ export async function scrypt(
         p: parallelization,
         maxmem: maxMemory,
       },
+      // This is related to handling the crypt function callback, should be safe to ignore.
+      // eslint-disable-next-line sonarjs/no-identical-functions
       (err, derivedKey) => {
         if (err) {
           reject(err);
