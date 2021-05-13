@@ -6,13 +6,13 @@ import {
   DEFAULT_SCRYPT_BLOCK_SIZE,
   DEFAULT_SCRYPT_PARALLELIZATION,
   DEFAULT_SCRYPT_MAX_MEMORY,
-} from "../lib/crypt";
+} from "../lib/crypt.js";
 import Haru, {
   HaruConstructorOpts,
   HaruMethod,
   HaruObject,
   HaruScryptParams,
-} from ".";
+} from "./index.js";
 
 interface HaruScryptConstructorOpts extends HaruConstructorOpts {
   cost: number;

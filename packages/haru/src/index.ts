@@ -1,11 +1,11 @@
 import Haru, {
-  HaruObject,
   HaruMethod,
+  HaruObject,
   HaruPbkdf2Params,
   HaruScryptParams,
-} from "./haru";
-import HaruPbkdf2 from "./haru/pbkdf2";
-import HaruScrypt from "./haru/scrypt";
+} from "./haru/index.js";
+import HaruPbkdf2 from "./haru/pbkdf2.js";
+import HaruScrypt from "./haru/scrypt.js";
 
 export function fromObject(obj: unknown): Haru {
   const { m } = obj as { m: HaruMethod };
@@ -68,9 +68,9 @@ export function haru10to20(haru10Object: {
 
 export {
   default as Haru,
+  HaruConstructorOpts,
+  HaruMethod,
   HaruObject,
   HaruPbkdf2Params,
   HaruScryptParams,
-  HaruMethod,
-  HaruConstructorOpts,
-} from "./haru";
+} from "./haru/index.js";

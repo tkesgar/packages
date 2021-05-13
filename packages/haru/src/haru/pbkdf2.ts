@@ -1,10 +1,10 @@
-import { pbkdf2, createSalt, DEFAULT_PBKDF2_ITERATIONS } from "../lib/crypt";
+import { pbkdf2, createSalt, DEFAULT_PBKDF2_ITERATIONS } from "../lib/crypt.js";
 import Haru, {
   HaruConstructorOpts,
   HaruMethod,
   HaruObject,
   HaruPbkdf2Params,
-} from ".";
+} from "./index.js";
 
 interface HaruPbkdf2ConstructorOpts extends HaruConstructorOpts {
   iterations: number;
