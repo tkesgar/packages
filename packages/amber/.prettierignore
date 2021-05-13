@@ -1,9 +1,0 @@
-.editorconfig
-.eslintignore
-.gitignore
-.husky/
-.nvmrc
-.prettierignore
-LICENSE
-coverage/
-dist/
