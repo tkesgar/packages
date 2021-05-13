@@ -22,9 +22,13 @@
   "publishConfig": {
     "access": "public"
   },
+  "engines": {
+    "node": ">=12"
+  },
   "files": [
     "dist/**"
   ],
+  "main": "./dist/cjs/index.js",
   "exports": {
     "import": "./dist/esm/index.js",
     "require": "./dist/cjs/index.js"
