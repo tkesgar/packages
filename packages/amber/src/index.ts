@@ -12,8 +12,8 @@ export function createWait<T = void>(): Wait<T> {
     reject = _reject;
   });
 
-  return Object.assign(promise, {
-    resolve: resolve!,
-    reject: reject!,
-  });
+  // resolve and reject will not be undefined, because the promise callback
+  // is executed immediately and the variables will be assigned.
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  return Object.assign(promise, { resolve: resolve!, reject: reject! });
 }
