@@ -11,9 +11,9 @@ describe("createWait", () => {
       wait.resolve();
     });
 
-    expect(fn).toBeCalledTimes(0);
+    expect(fn).toHaveBeenCalledTimes(0);
     await wait;
-    expect(fn).toBeCalledTimes(1);
+    expect(fn).toHaveBeenCalledTimes(1);
   });
 
   it("should provide the value provided at resolve as wait value", async () => {
