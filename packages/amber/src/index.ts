@@ -4,8 +4,8 @@ export type Wait<T = void> = Promise<T> & {
 };
 
 export function createWait<T = void>(): Wait<T> {
-  let resolve: (value: T) => void;
-  let reject: (reason: unknown) => void;
+  let resolve: ((value: T) => void) | undefined;
+  let reject: ((reason: unknown) => void) | undefined;
 
   const promise = new Promise<T>((_resolve, _reject) => {
     resolve = _resolve;
@@ -13,7 +13,7 @@ export function createWait<T = void>(): Wait<T> {
   });
 
   return Object.assign(promise, {
-    resolve,
-    reject,
+    resolve: resolve!,
+    reject: reject!,
   });
 }

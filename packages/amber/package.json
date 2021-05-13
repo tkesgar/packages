@@ -22,22 +22,20 @@
   "publishConfig": {
     "access": "public"
   },
-  "engines": {
-    "node": ">=12"
-  },
   "files": [
     "dist/**"
   ],
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/cjs/index.js",
+  "exports": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
   "scripts": {
     "watch": "tsc -w",
-    "lint": "eslint . --ext js,ts && tsc --noEmit",
-    "format": "prettier --write '**/*'",
     "test": "jest",
     "clean": "rm -rf dist/**",
-    "build": "tsc",
-    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build": "npm run build:cjs && npm run build:esm",
+    "prebuild": "npm run clean",
     "prepack": "npm run clean && npm run build"
   }
 }
